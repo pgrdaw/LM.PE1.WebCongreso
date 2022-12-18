@@ -1,0 +1,18 @@
+GENERAL
+Se crean 3 páginas web: index.html, programacion.htm e inscripcion.html. 
+No se utilizan tildes en los nombres de archivo para evitar problemas de compatibilidad. 
+Las tres páginas incluyen la declaración <!DOCTYPE html> para informar al navegador de que el tipo de documento que está abriendo es HTML5.
+El idioma utilizado en la web es el Castellano por lo que se añade la etiqueta <html lang="es">
+El código para generar el encabezado, el menú de navegación y el pie de página es común a las 3 páginas, por lo que una vez conseguido en una de las páginas se copia a las demás.
+El juego de caracteres utilizado es UTF-8 por lo que se añade al encabezado de todas las páginas la etiqueta <meta charset="UTF-8">
+
+INDEX.HTML
+<head>
+Se  enlaza esta página con la página de estilos mediante la etiqueta <link rel="stylesheet" href="./css/estilos.css"> 
+
+
+
+ESTILOS.CSS
+header {
+    Se asiga como el color #cdeaf4 como color de fondo al encabezamiento 
+}

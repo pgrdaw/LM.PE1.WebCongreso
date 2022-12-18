@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lato:ital,wght@1,700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h1 {
+    color: #A9A9A9;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+}
+
+h2,
+h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
+header {
+    background-color: #CCEAF4;
+    padding: 20px 15%;
+    overflow: hidden;
+}
+
+header img {
+    float: left;
+    padding: 30px;
+    rotate: -15deg;
+}
+
+header h1 {
+    margin: 0;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+header p {
+    text-align: right;
+    color: #232323;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 14px;
+}
+
+nav {
+    background-color: #114358;
+    padding: 0px 15%;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+nav ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav li {
+    display: inline-block;
+    padding: 15px;
+}
+
+nav li a {
+    text-decoration-line: none;
+    color: #F2AA1F;
+}
+
+nav li a:hover {
+    text-decoration-line: underline;
+    background-color: black;
+    color: white;
+}
+
+main h2 {
+    text-align: center;
+}
+
+section {
+    padding: 20px 15%;
+}
+
+#uno {
+    overflow: hidden;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#uno video {
+    float: right;
+    padding-left: 20px;
+}
+
+#dos {
+    background-color: #648da0;
+}
+
+#dos h2 {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#dos article {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+    line-height: 1.5rem;
+    font-size: 0.8rem;
+    font-style: normal;
+}
+
+.subrayado {
+    border-bottom: 0.2rem dotted #b9d231;
+}
+
+.subrayado_fino {
+    border-bottom: 0.15rem dotted #b9d231;
+}
+
+#tres {
+    text-align: center;
+    font-style: normal;
+}
+
+#tres div {
+    display: inline-block;
+    width: 32%;
+    vertical-align: top;
+    font-size: 0.8rem;
+}
+
+footer {
+    background-color: #000000;
+    color: #f7f7f7;
+    padding: 20px 15%;
+    text-align: left;
+    line-height: 1.6rem;
+    font-size: 0.8rem;
+}
+
+#cuatro h2 {
+    font-family: inherit ;
+}
+
+caption {
+    background-color: #0A3143;
+    color: #e6eaec;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+table {
+    font-size: 0.6rem;
+    width: 100%;
+}
+
+thead {
+    background-color: #FF3B3F;
+    text-align: left;
+    font-weight: bold;
+}
+
+tfoot {
+    background-color: #FF3B3F;
+    text-align: center;
+    font-size: 07.rem;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(241, 121, 121);
+}
+
+.underline {
+    border-bottom: 2px solid #000000;
+}
+
+td {
+    padding-right: 10px;
+}
+
+td:last-child {
+    border: 3px solid #CCEAF4;
+}
+
+#cinco {
+    background-color: #648da0;
+}
+
+#cinco h2 {
+    margin-bottom: 0px;
+    text-align: left;
+    font-family: inherit ;
+}
+
+#cinco h3 {
+    display: inline-block;
+    margin: 0px 0px 10px 0px;
+    background-color: #6a7fc4;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+ol,
+ul {
+    padding: 0px 30px 0px 0px;
+}
+
+ol>li {
+    display: inline-block;
+    outline: red;
+}
+
+li {
+    padding: 5px 0px;
+    list-style: none;
+    font-size: 0.8rem;
+}
