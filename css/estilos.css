@@ -199,7 +199,6 @@ td:last-child {
     margin-bottom: 0px;
     text-align: left;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
 }
 
 #cinco h3 {
@@ -226,8 +225,11 @@ li {
 
 form {
     padding: 20px 15%;
+}
 
-
+label {
+    display: inline-block;
+    min-width: 15%;
 }
 
 .opensans {
