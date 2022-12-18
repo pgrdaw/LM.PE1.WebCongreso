@@ -1,13 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lato:ital,wght@1,700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="./css/estilos.css" rel="stylesheet">
+    <title>XXI Congreso de Periodismo del CEEDCV</title>
+    <script src="https://kit.fontawesome.com/25abde3aba.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <h1>Inscripción</h1>
-<a href="./index.html">Inicio</a>    
+
+    <header>
+        <img src="./img/logo1.png" alt="Imagen de un periódico" height="75">
+        <h1>XXI Congreso de Periodismo del CEEDCV</h1>
+        <p>Valencia, 11 al 14 de Marzo de 2023 <br>
+            Palacio de Congresos</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./programacion.html">Programación</a></a></li>
+            <li><a href="./inscripcion.html">Registro a las Jornadas</a></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Formulario de registro a las jornadas</h2>
+
+        <form action="/inscripcion.php" method="post">
+
+            <fieldset>
+                <legend>Datos personales</legend>
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="name"><br>
+
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="surname"><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br>
+
+                <label for="telefono">Telefono:</label>
+                <input type="tel" id="telefono" name="phone"><br>
+                
+                <label for="foto">Foto:</label>
+                <input type="file" id="fotp" name="photo"><br>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Perfil de usuario</legend>
+                                
+                <label for="motivos">Motivos:</label>
+                <input type="text" id="motivos" name="motivation"><br>
+                
+                <label for="profesion">Profesión:</label>
+                <input type="text" id="profesion" name="job"><br>
+
+                <label for="taller">Taller:</label>
+                <input type="text" id="taller" name="workshop"><br>
+
+                <label for="taller">Fecha:</label>
+                <input type="date" id="fecha" name="date"><br>
+
+                <input type="checkbox" id="acepto" name="agree">
+                <label for="acepto">He leído y acepto la política de privacidad y el aviso legal</label><br>
+
+
+
+
+            </fieldset>
+
+
+        </form>
+
+    </main>
+
+
+    <footer>
+        Actividad realizada por Pablo Gimeno Ramallo, para la actividad de Lenguajes de marcas <br>
+        Primer trimestre 2022/23
+    </footer>
+
 </body>
+
 </html>

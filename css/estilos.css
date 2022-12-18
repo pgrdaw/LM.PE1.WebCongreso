@@ -54,7 +54,7 @@ nav {
     background-color: #114358;
     padding: 0px 15%;
     text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 0.8rem;
     font-weight: bold;
 }
@@ -147,7 +147,7 @@ footer {
 }
 
 #cuatro h2 {
-    font-family: inherit ;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 caption {
@@ -198,14 +198,15 @@ td:last-child {
 #cinco h2 {
     margin-bottom: 0px;
     text-align: left;
-    font-family: inherit ;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
 
 #cinco h3 {
     display: inline-block;
     margin: 0px 0px 10px 0px;
     background-color: #6a7fc4;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
 }
 
 ol,
@@ -215,11 +216,36 @@ ul {
 
 ol>li {
     display: inline-block;
-    outline: red;
 }
 
 li {
     padding: 5px 0px;
     list-style: none;
     font-size: 0.8rem;
+}
+
+form {
+    padding: 20px 15%;
+
+
+}
+
+.opensans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.lato {
+    font-family: 'Lato', sans-serif;
+}
+
+.baskerville {
+    font-family: 'Libre Baskerville', serif;
+}
+
+.fjalla {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.impact {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
