@@ -229,7 +229,7 @@ form {
 
 label {
     display: inline-block;
-    width: 24%;
+    min-width: 20%;
 }
 
 input {
