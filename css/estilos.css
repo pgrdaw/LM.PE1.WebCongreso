@@ -229,7 +229,11 @@ form {
 
 label {
     display: inline-block;
-    min-width: 15%;
+    width: 24%;
+}
+
+input {
+    margin-right: 10px;
 }
 
 .opensans {
