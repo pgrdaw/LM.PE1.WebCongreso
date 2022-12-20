@@ -1,31 +1,36 @@
 <html>
-    <body>
-        <p>**** El original de este fichero se encuentra en /opt/lampp/htdocs ****</p>
+    <body style="text-align:center">        
 
-        <h1 style="text-align:center;">Proceso servidor Apache XAMPP: Recibiendo datos del formulario de inscripción...</h1>
+        <h1>Proceso servidor Apache XAMPP</h1>
+        <h2>Recibiendo datos del formulario de inscripción...</h2>
 
         <table>
-            <caption><h2>Datos recopilados</h2></caption>
+            <caption><h3>Datos recopilados</h2></caption>
+            <tr><td><b>label ........ </b></td>
+            <td><b>input ........ </b></td></tr>
             <tr><td>Nombre</td>
-            <td><?php echo $_POST["nombre"]; ?></td></tr>
+            <td><i><?php echo $_POST["nombre"]; ?></i></td></tr>
             <tr><td>Apellidos</td>
-            <td><?php echo $_POST["apellidos"]; ?></td></tr>
+            <td><i><?php echo $_POST["apellidos"]; ?></i></td></tr>
             <tr><td>Email</td>
-            <td><?php echo $_POST["email"]; ?></td></tr>
-            <tr><td><Telefono/td>
-            <td><?php echo $_POST["telefono"]; ?></td></tr>
+            <td><i><?php echo $_POST["email"]; ?></i></td></tr>
+            <tr><td>Telefono</td>
+            <td><i><?php echo $_POST["telefono"]; ?></i></td></tr>
             <tr><td>Foto</td>
-            <td><?php echo $_POST["foto"]; ?></td></tr>
+            <td><i><?php echo $_POST["foto"]; ?></i></td></tr>
             <tr><td>Motivos</td>
-            <td><?php echo $_POST["motivos"]; ?></td></tr>
+            <td><i><?php echo $_POST["motivos"]; ?></i></td></tr>
             <tr><td>Profesión</td>
-            <td><?php echo $_POST["profesion"]; ?></td></tr>
-            <tr><td>Taller al que sasistirá</td>
-            <td><?php echo $_POST["taller"]; ?></td></tr>
-            <tr><td>Fechas en las que sasistirá   </td>
-            <td><?php echo $_POST["fechas"]; ?></td></tr>
-            <tr><td>Acepta política</td>
-            <td><?php echo $_POST["acepto"]; ?></td></tr>
+            <td><i><?php echo $_POST["profesion"]; ?></i></td></tr>
+            <tr><td>Taller</td>
+            <td><i><?php echo $_POST["taller"]; ?></i></td></tr>
+            <tr><td>Fechas</td>
+            <td><i><?php echo $_POST["fechas"]; ?></i></td></tr>
+            <tr><td>Acepta</td>
+            <td><i><?php echo $_POST["acepto"]; ?></i></td></tr>
+         </table>
          
-</body>
+         <p>***** El original de este fichero se encuentra en /opt/lampp/htdocs *****</p>
+        
+     </body>
 </html>
