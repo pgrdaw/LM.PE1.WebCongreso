@@ -6,13 +6,120 @@ El idioma utilizado en la web es el Castellano por lo que se añade la etiqueta 
 El código para generar el encabezado, el menú de navegación y el pie de página es común a las 3 páginas, por lo que una vez conseguido en una de las páginas se copia a las demás.
 El juego de caracteres utilizado es UTF-8 por lo que se añade al encabezado de todas las páginas la etiqueta <meta charset="UTF-8">
 
-INDEX.HTML
-<head>
-Se  enlaza esta página con la página de estilos mediante la etiqueta <link rel="stylesheet" href="./css/estilos.css"> 
+
+*****************/INDEX.HTML*******************************
+<!DOCTYPE html>             
+    Página generada usando html5.
+<html lang="es">            
+    Idioma de la página: Español.
+
+
+<head></head>               
+    Encabezado. No se mostrará en pantalla pero es necesario para el correcto funcionamiento de la web.
+<meta charset="UTF-8">      
+    Juego de caracteres utilizado: UTF-8. Garantiza la compatibilidad en cualquier navegador.
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lato:ital,wght@1,700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    Carga los tipos de fuente que se utilizarán más adelante en la web
+<link href="./css/estilos.css" rel="stylesheet">
+    Carga la hoja de estilos de este proyecto
+<title>XXI Congreso de Periodismo del CEEDCV</title>
+    Título de la página web que mostrará el navegador en la pestaña.
+<script src="https://kit.fontawesome.com/25abde3aba.js" crossorigin="anonymous"></script>
+    Carga script de fontawesome.com para poder utilizar los iconos allí publicados
+
+
+<body></body>
+    Cuerpo de la web. Lo que se mostrará en el navegador.
+<header></header>
+    Sección encabezamiento.
+<img src="./img/logo1.png" alt="Imagen de un periódico" height="75">
+    Carga de la carpeta 'img' y muestra la magen 'logo1.png' del encabezamiento, la del periódico 'extra extra'. Como es demasiado grande se limita su altura a 75 pixeles. EL ancho se reducirá automáticamente para mantener las proporciones iniciales.
+<h1></h1>
+    Marca 'XXI Congreso de Periodismo del CEEDCV', el título, como encabezamiento de nivel 1 posteriormente se usará esta etiqueta para dar formato al texto que se mostrará por pantalla.
+<p></p>
+    Marca 'Valencia, 11 al 14 de Marzo de 2023 Palacio de Congresos' como un párrafo de texto normal.
+<br>   
+
+    <nav>
+        <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./programacion.html">Programación</a></a></li>
+            <li><a href="./inscripcion.html">Registro a las Jornadas</a></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2 class="italic">XXI Jornadas de Periodismo</h2>
+
+        <section id="uno">
+            <video src="./media/video_jornadas.mp4" width="300px" controls>Video</video>
+            Con el reto de llevar el periodismo europeo más allá de la actividad
+            institucional, las jornadas parten del interés común de explorar
+            nuevas vías de colaboración como la desarrollada por el CEEDCV y The
+            Guardian, que desde 2019 comparten tanto contenidos, reportajes y
+            noticias diarias, como aprendizajes sobre el modelo de financiación
+            por socios que tienen en común.
+        </section>
+
+        <section id="dos">
+            <article id="donde">
+                <h2 class="subrayado">¿Dónde se realiza?</h2>
+                Salón de actos del complejo Misericórdia <br>
+                Plaza de la Misericórdia, Valencia, 46115 Tel. 96 351 25 22 <br>
+                <a href="mailto:info@congresoceed.com" title="Dirección de email para solicitar más información"
+                    class="subrayado_fino">info@congresoceed.com</a><br>
+                <a href=""><i class="fa-brands fa-twitter"></i></a><a href=""><i
+                        class="fa-brands fa-facebook-f"></i></a>
+
+
+            </article>
+            <article id="cuando">
+                <h2 class="subrayado">¿Cuándo se realiza?</h2>
+                Sábado,11 de marzo, de 9:00 h a 20:00 h <br>
+                Domingo, 12 de marzo, de 9:00 h a 14:00 h <br>
+                Lunes, 13 de marzo, de 9:00 h a 20:00 h <br>
+                Martes, 14 de marzo, de 9:00 h a 14:00 h <br>
+                <h3>Entrada libre con <a href="./inscripcion.html" class="subrayado_fino">inscripción</a> previa</h3>
+            </article>
+        </section>
+
+        <section id="tres">
+            <h2>Eventos interesantes</h2>
+            <div> 
+                <img src="./img/evento1.png" alt="Evento 1" width="90%" height="100px">
+                <br> Formación integral para el periodista de Televisión - Noviembre 2023
+            </div>
+            <div> 
+                <img src="./img/evento2.png" alt="Evento 2" width="90%" height="100px">
+                <br> JICUP Periodismo a distancia
+            </div>
+            <div> 
+                <img src="./img/evento3.png" alt="Evento 3" width="90%" height="100px">
+                <br> Sexta Jornada de Seguridad de la Información
+            </div>
+            <div>
+                <img src="./img/evento4.png" alt="Evento 4" width="90%" height="100px">
+                <br> Jornada Internacional
+            </div>
+            <div> 
+                <img src="./img/evento5.png" alt="Evento 5" width="90%" height="100px">
+                <br> I Jornadas de Periodismo Europeo.
+            </div>
+            <div> 
+                <img src="./img/evento6.png" alt="Evento 6" width="90%" height="100px">
+                <br> XIX Jornada Nacional de Periodismo
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        Actividad realizada por Pablo Gimeno Ramallo, para la actividad de Lenguajes de marcas <br>
+        Primer trimestre 2022/23
+    </footer>
 
 
 
-ESTILOS.CSS
-header {
-    Se asiga como el color #cdeaf4 como color de fondo al encabezamiento 
-}
+</body>
+
+</html>
