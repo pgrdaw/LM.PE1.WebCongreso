@@ -1,125 +1,437 @@
-GENERAL
-Se crean 3 páginas web: index.html, programacion.htm e inscripcion.html. 
-No se utilizan tildes en los nombres de archivo para evitar problemas de compatibilidad. 
-Las tres páginas incluyen la declaración <!DOCTYPE html> para informar al navegador de que el tipo de documento que está abriendo es HTML5.
-El idioma utilizado en la web es el Castellano por lo que se añade la etiqueta <html lang="es">
-El código para generar el encabezado, el menú de navegación y el pie de página es común a las 3 páginas, por lo que una vez conseguido en una de las páginas se copia a las demás.
-El juego de caracteres utilizado es UTF-8 por lo que se añade al encabezado de todas las páginas la etiqueta <meta charset="UTF-8">
+Memoria 
+Web Congreso
+
+Pablo Gimeno Ramallo
+1DAW - Curso 2022/23
 
 
-*****************/INDEX.HTML*******************************
-<!DOCTYPE html>             
-    Página generada usando html5.
-<html lang="es">            
-    Idioma de la página: Español.
+
+Índice
+Introducción.
+Web index.html.
+Encabezado.
+Menú de navegación.
+Sección principal.
+Subsección #uno. Presentación y vídeo.
+Subsección #dos. ¿Dónde y Cuándo?.
+Subsección #tres. Eventos interesantes.
+Pie de página.
+Web programación.html.
+Encabezamiento.
+Menú de navegación.
+Sección principal.
+Subsección #cuatro. Horario de ponencias.
+Subsección #cinco. Programación.
+Pie de página.
+Web inscripcion.html.
+Encabezamiento.
+Menú de navegación.
+Sección principal.
+Subsección Datos Personales.
+Subsección Perfil de Usuario.
+Subsección Talleres de Interés.
+Subsección Fechas.
+Subsección Acepto condiciones.
+Pie de página.
+Proceso servidor inscripcion.php.
+Hoja de estilos estilos.css.
+Carpeta img.
+Carpeta media.
+Entidades HTML5 utilizadas en el proyecto.
+Entidades CSS utilizadas en el proyecto.
 
 
-<head></head>               
-    Encabezado. No se mostrará en pantalla pero es necesario para el correcto funcionamiento de la web.
-<meta charset="UTF-8">      
-    Juego de caracteres utilizado: UTF-8. Garantiza la compatibilidad en cualquier navegador.
+
+Introducción.
+El proyecto de web para el Congreso consta de 3 páginas web (index.html, programacion.htm e inscripcion.html), una página de estilos (estilos.css), una carpeta para imágenes y otra para contenido multimedia. El usuario accede inicialmente a la web index.html donde se muestra la información general relativa al congreso y desde allí podrá acceder a la web programacion.html donde se se detallan los horarios de las distintas ponencias y a la web registro.html donde encontrará un formulario para inscribirse a las jornadas.
+Las tres webs están creadas usando html5, su idioma principal es el castellano, utilizan el juego de caracteres UTF-8 y están enlazadas con la única hoja de estilos, estilos.css, con las fuentes de Google Fonts y con el script de Fontawesome, necesario para poder utilizar sus iconos. Además, comparten una estructura similar por lo que las secciones de encabezado, menú de navegación y pie de página de index.html se reutiliza en las otras dos webs. 
+
+
+
+Web index.html.
+Muestra información general sobre el congreso. La web consta de un encabezamiento, un menú de navegación, una sección principal con tres subsecciones y un pie de página:
+
+Encabezado. Compuesto por:
+Imagen ‘logo.png’. Alojada en la carpeta ‘./img’. Se reduce a una altura de 75 píxeles manteniendo las proporciones de la imagen original. Posteriormente, mediante estilos, se gira 15º y se hace flotar a la izquierda del resto de elementos del encabezado.
+Título de la web. Mediante estilos se elige fuente, color, tamaño, peso, alineamiento a la derecha y se transforma a mayúsculas.
+Subtítulo. Igualmente, se definen sus características en la hoja de estilos.
+
+Menú de navegación. Para conseguir el aspecto deseado, se organizan los enlaces como elementos de una lista no ordenada y se les asigna la propiedad ‘display: inline-block;’ para evitar el salto de línea entre cada uno de ellos. Además, mediante el selector ‘nav li a:hover’ se modifican los colores de texto y fondo y se añade un subrayado cuando se desplaza el cursor por encima de los hipervínculos.
+
+Sección Principal. Dividida en tres subsecciones:
+
+Subsección #uno.  Presentación y vídeo.
+Se incrusta el video ‘video_jornadas.mp4’ alojado en la carpeta ‘./media’. Se le añaden los controles para poder reproducir, pausar, etc. Mediante el estilo ‘float: right;’ se le hace flotar a la derecha del resto de contenido.
+
+Subsección #dos. ¿Dónde y Cuándo?.
+La sección se divide en dos artículos de ancho el 49% del tamaño del padre y a los que se les asigna, como se hizo en el menú navegación, la propiedad ‘display: inline-block;’ para que no se produzca el salto de línea. Con esto se consigue que los dos artículos se sitúen uno al lado del otro. Los dos tipos de subrayado de puntos verdes se consiguen definiendo dos clases diferentes: ‘.subrayado’ y ‘.subrayado_fino’. Los iconos utilizados se obtienen de Fontawesome mediante  clases del tipo ‘class="fa-brands fa-twitter"’.
+
+Subsección #tres. Eventos interesantes.
+La sección consta de seis imágenes distribuidas en 3 columnas y 2 filas. Cada imagen tiene su pie de imagen. Para conseguir la presentación deseada se “envuelve” cada imagen junto con su texto dentro de un contenedor ‘div’ de ancho el 32% del ancho de la sección y que hacen uso, una vez más, de la propiedad ‘display: inline-block;’. Para mejorar la estética de esta sección se opta por que todas las imágenes tengan las mismas dimensiones, forzándolas a tener un alto de 100 píxeles y un ancho del 90% del ‘div’ en el que se encuentran. Las imágenes pierden las proporciones originales pero el aspecto general mejora.
+Pie de Página. Letras blancas sobre fondo negro para mostrar los créditos.
+
+
+
+Web programación.html.
+Muestra la programación detallada y los horarios de las ponencias del congreso. La web consta de un encabezamiento, un menú de navegación, una sección principal con dos subsecciones y un pie de página:
+
+Encabezamiento. Reutilización del de index.html.
+
+Menú de navegación. Reutilización del de index.html.
+
+Sección principal. Dividida en tres subsecciones:
+
+Subsección #cuatro. Horario de ponencias.
+Consta de título y tabla con los datos de horarios. 
+La tabla tiene título, encabezado, cuerpo principal y pie de tabla. Se utilizan las propiedades html ‘rowspan’ y ‘colspan’ para extender los datos a lo largo de varias celdas de la misma columna o fila respectivamente. Se incluyen iconos de Fontawesome de igual manera que se hizo en index.html. 
+Los estilos de toda la tabla se definen en estilos.css. El sombreado de las filas pares del cuerpo de la tabla se consigue mediante el selector ‘tr:nth-child(even)’ y la propiedad ‘background-color’. La línea gruesa negra debajo de algunas celdas se obtiene marcándolas con la clase ‘underline’ y asignando un borde ‘border-bottom: 2px solid #000000;’ al selector ‘.underline’. Por último, el borde azul alrededor de las últimas celdas de cada fila del cuerpo y pie de tabla se consigue con la propiedad ‘td:last-child { border: 3px solid #CCEAF4; }’.
+
+Subsección #cinco. Programación.
+Consta de título de sección y tres listas no ordenadas (con el horario de cada día del congreso) anidadas dentro de una lista ordenada. A los elementos de la lista ordenada (cada uno de los días del congreso) se les aplican las propiedades ol>li { width: 32%; display: inline-block; vertical-align: top; } para conseguir que la programación salga ordenada en tres columnas independientemente del ancho del navegador.
+Pie de página. Reutilización del de index.html.
+
+
+
+Web inscripcion.html.
+Muestra el formulario para la inscripción en las jornadas. La web consta de un encabezamiento, un menú de navegación, una sección principal con un formulario dividido en 5 subsecciones y un pie de página:
+
+Encabezamiento. Reutilización del de index.html
+
+Menú de navegación. Reutilización del de index.html
+
+Sección principal. Consta de un título y un formulario dividido en cinco subsecciones.  
+A todas las subsecciones, campos, áreas de texto y cuadros de selección se les aplica un borde redondeado ‘border-radius: 10px;’ que, además, utilizando los selectores ‘:valid’ e ‘:invalid’, se vuelve verde cuando el valor introducido es válido o rojo cuando no es válido. 
+Las etiquetas de texto se relacionan con su campo ‘input’ mediante el atributo ‘for=”nombre”’ que coincide con el ‘id=”nombre”’ del input correspondiente. Además, para darle un aspecto más ordenado se les asigna un ancho mínimo del 20% y se alinean verticalmente arriba.
+A los campos que sean obligatorios se les añade el atributo ‘required’ que exigirá al usuario introducir un valor válido para dejarle enviar el formulario.
+Al finál del formulario se incorpora un botón para enviar los datos recogidos al servidor, por ahora local, mediante ‘action="http://localhost/inscripcion.php" method="POST"’ para que ejecute el programa ‘inscripcion.php’.
+
+Subsección Datos Personales. 
+Utilizando inputs sencillos de tipo texto, email y teléfono se recogen los datos que deberán cumplir las reglas de expresiones (regex) definidas en la propiedad ‘pattern’. En los 4 campos, mientras no estén rellenos,  se muestra el texto de ayuda definido en ‘placeholder=’. La foto de perfil se recoge utilizando un input tipo fichero, lo que mostrará un botón para abrir el explorador de archivos y seleccionar el deseado.
+
+Subsección Perfil de Usuario.
+El campo motivos se define como un área de texto de 4 filas por 50 columnas y una longitud mínima de la respuesta de 5 caracteres.
+Para recoger la profesión se utiliza un ‘select’, que mostrará una lista desplegable con varias opciones ‘option’ de las que sólo se podrá elegir una. La primera opción viene seleccionada por defecto pero está deshabilitada por lo que el usuario se verá forzado a cambiarla pero le servirá como texto de ayuda equivalente a los introducidos mediante ‘placeholder’.
+
+Subsección Talleres de Interés.
+Los talleres a los que el usuario puede inscribirse pueden ser varios por lo que se presentan mediante varias ‘checkbox’ relacionadas entre ellas por el atributo ‘name="taller"’.
+
+Subsección Fechas.
+Las opciones de días en los que quiere inscribirse, sin embargo, son excluyentes. El usuario sólo puede (y debe) elegir una de ellas. Para esto se utilizan varios ‘input’ de tipo ‘radio’ relacionados entre sí por ‘name="fechas"’.
+
+Subsección Acepto condiciones.
+Utilizando un checkbox obligatorio nos aseguraremos de que el usuario acepta las condiciones del servicio.
+
+Pie de página. Reutilización del de index.html.
+
+
+
+Proceso servidor inscripcion.php.
+A modo de ejemplo y para comprobar la correcta recogida de datos del formulario se crea el programa inscripcion.php dentro de la carpeta /opt/lampp/htdocs que, simplemente, muestra por pantalla los valores introducidos por el usuario en el formulario mediante instrucciones de tipo ‘<?php echo $_POST["nombre"]; ?>’.
+
+
+
+Hoja de estilos estilos.css.
+Utilizada para definir los estilos de las entidades HTML mediante reglas CSS. Las Reglas CSS están compuestas de uno o varios Selectores, seguido de una llave de apertura ‘{‘, una o varias Declaraciones y una llave de cierre ‘}’. Cada declaración está formada por una Propiedad, seguido de ‘:’, un valor y ‘;’.
+En esta hoja se utilizan selectores de etiqueta (h1), de clase (.subrayado), de id (#uno), descendientes (header img), hijos directos (ol>li) y de estado (a:hover).
+
+
+
+Carpeta img.
+En esta carpeta se almacenan las imágenes utilizadas en el proyecto. Su ruta de acceso es ./img
+
+
+
+Carpeta media.
+En esta carpeta se almacenan los vídeos y demás ficheros multimedia utilizados en el proyecto. Su ruta de acceso es ./media
+
+
+
+Entidades HTML5 utilizadas en el proyecto.
+(Por orden de aparición). 
+Etiqueta
+Significado / Uso
+index.html
+<!DOCTYPE html>	 
+Página generada en html5.
+<html lang="es">
+Idioma de la página: Español.
+<head></head>
+Encabezado. No se mostrará en pantalla pero es necesario para el correcto funcionamiento de la web.
+<meta charset="UTF-8"> 
+Juego de caracteres utilizado: UTF-8. Garantiza la compatibilidad en cualquier navegador.
 <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lato:ital,wght@1,700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    Carga los tipos de fuente que se utilizarán más adelante en la web
+Carga los tipos de fuente que se utilizarán más adelante en la web.
 <link href="./css/estilos.css" rel="stylesheet">
-    Carga la hoja de estilos de este proyecto
-<title>XXI Congreso de Periodismo del CEEDCV</title>
-    Título de la página web que mostrará el navegador en la pestaña.
+Carga la hoja de estilos de este proyecto.
+<title></title>
+Título de la página web que mostrará el navegador en la pestaña: ‘XXI Congreso de Periodismo del CEEDCV.’
 <script src="https://kit.fontawesome.com/25abde3aba.js" crossorigin="anonymous"></script>
-    Carga script de fontawesome.com para poder utilizar los iconos allí publicados
-
-
+Carga script de fontawesome.com para poder utilizar los iconos allí publicados.
 <body></body>
-    Cuerpo de la web. Lo que se mostrará en el navegador.
+Cuerpo de la web. Lo que se mostrará en el navegador.
 <header></header>
-    Sección encabezamiento.
+Sección encabezamiento.
 <img src="./img/logo1.png" alt="Imagen de un periódico" height="75">
-    Carga de la carpeta 'img' y muestra la magen 'logo1.png' del encabezamiento, la del periódico 'extra extra'. Como es demasiado grande se limita su altura a 75 pixeles. EL ancho se reducirá automáticamente para mantener las proporciones iniciales.
+Carga de la carpeta 'img' y muestra la magen 'logo1.png' del encabezamiento, la del periódico 'extra extra'. Como es demasiado grande se limita su altura a 75 pixeles. EL ancho se reducirá automáticamente para mantener las proporciones iniciales.
 <h1></h1>
-    Marca 'XXI Congreso de Periodismo del CEEDCV', el título, como encabezamiento de nivel 1 posteriormente se usará esta etiqueta para dar formato al texto que se mostrará por pantalla.
+Marca 'XXI Congreso de Periodismo del CEEDCV', el título, como encabezamiento de nivel 1 posteriormente se usará esta etiqueta para dar formato al texto que se mostrará por pantalla.
 <p></p>
-    Marca 'Valencia, 11 al 14 de Marzo de 2023 Palacio de Congresos' como un párrafo de texto normal.
-<br>   
+Marca 'Valencia, 11 al 14 de Marzo de 2023 Palacio de Congresos' como un párrafo de texto normal.
+<br>
+Indica un salto de línea.
+<nav></nav>
+Sección del menú navegación.
+<ul></ul>
+Lista desordenada para contener los elementos del menú de navegación.
+<li></li>
+Cada uno de los elementos del menú de navegación es un elemento de la lista desordenada.
+<a href="./index.html"></a>
+Enlace a la página ‘index.html’, programcaion.html ó inscripcion.html’ al seleccionar ‘Inicio’, ‘Programación’ o ‘Registro a las Jornadas’.
+<main></main>
+Sección principal de la página.
+<h2 class="italic"></h2>
+Marca 'XXI Jornadas de Periodismo', como encabezamiento de nivel 2 y de tipo ‘italic’ posteriormente se usarán estas etiquetas para dar formato al texto que se mostrará por pantalla.
+<section id="uno"></section>
+Subsección de ‘main’, identificada como ‘uno’.
+<video src="./media/video_jornadas.mp4" width="300px" controls>Video</video>
+Video ‘video_jornadas4’ incrustado con controles de reproducción. En caso de que el navegador no sea capaz de reproducirlo, mostrará el mensaje ‘Video’.
+<article id="donde"></article>
+Artículo identificado como ‘donde’.
+<h2 class="subrayado"></h2>
+Marca '¿Dónde se realiza?', como encabezamiento de nivel 2 y de tipo ‘subrayado’ posteriormente se usarán estas etiquetas para dar formato al texto que se mostrará por pantalla.
+<a href="mailto:info@congresoceed.com" title="Solicito más información sobre el Congreso" class="subrayado_fino">info@congresoceed.com</a>
+Enlace para abrir un correo electrónico con destinatario ‘info@congresoceed.com’ y título ‘Solicito más información sobre el Congreso’. Además el enlace va marcado como de tipo ‘subrayado_fino’ para su posterior renderizado.
+<a href=""></a>
+Enlace vacío. Preparado para enlazar los iconos con la web.
+<i class="fa-brands fa-twitter"></i>
+Inserción de iconos (de twitter y facebook) desde fontawesome.com.
+<h3></h3>
+Marca el contenido entre etiquetas como encabezamiento de nivel 3. Posteriormente se hará referencia a esta etiqueta para dar formato al texto mostrado por pantalla.
+<div></div>
+Identifica el contenido entre etiquetas como contenido de bloque.
+<img src="./img/evento1.png" alt="Evento 1" width="90%" height="100px">
+Inserta la imagen ‘evento1.png’, que está guardada en la carpeta ‘img’ y le fija un alto de 100px y un ancho del 90% del contenedor en el que se encuentra. De esta manera, si el ancho del contenedor varía porque la ventana del navegador se estrecha, la imagen no será cortada, aunque sí deformada puesto que su altura de 100 pixeles no variará.
+<footer></footer>
+Sección de pie de página.
+programacion.html
+<table></table>
+Crea una tabla.
+<caption></caption>
+Título de la tabla.
+<thead></thead>
+Cabecera de la tabla.
+<tr></tr>
+Fila de la tabla.
+<th></th>
+Dato perteneciente a la cabecera de la tabla.
+<tbody></tbody>
+Cuerpo de la tabla.
+<td rowspan="4">
+Dato de la tabla que se extiende por 4 filas hacia abajo.
+<tfoot></tfoot>
+Pie de la tabla.
+<td colspan="5">
+Dato de la tabla que se extiende por 5 columnas hacia la derecha.
+<ol></ol>
+Lista ordenada.
+<li></li>
+Elemento de lista.
+<ul></ul>
+Lista no ordenada.
+<b></b>
+Texto en negrita.
+inscripcion.html
+<form action="http://localhost/inscripcion.php" method="POST"></form>
+Crea un formulario que enviará los datos recopilados en los diferentes campos al fichero inscripcion.php alojado, por ahora en local
+<fieldset></fieldset>
+Agrupa una serie de campos del formulario
+<legend></legend>
+Leyenda (título) de la agrupación de campos
+<label for="nombre"></label>
+Etiqueta relacionada con el campo identificado como ‘nombre’
+<input type="text" id="nombre" name="nombre" required pattern="^[A-Z][a-zA-Z\s]{1,49}$" placeholder="Nombre">
+Campo de tipo texto, identificado como ‘nombre’, de nombre (el que se enviará al php) ‘nombre’, obligatorio y que debe ajustarse al patrón ‘^[A-Z][a-zA-Z\s]{1,49}$’ que le obliga a empezar por una letra mayúscula y continuar con entre 1 y 49 letras o espacios (para permitir nombres compuestos) más. Mientras no esté relleno por el usuario, mostrará la ayuda visual ‘Nombre’
+<input type="email" id="email" name="email" required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" placeholder="usuario@dominio.com">
+Campo de tipo email, identificado como ‘email’, de nombre ‘email’, obligatorio y que debe ajustarse al patrón ‘^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$’ para filtrar posibles emails no válidos. Mientras no esté relleno por el usuario, mostrará la ayuda visual ‘usuario@dominio.com’
+<input type="tel" id="telefono" name="telefono" required pattern="^[\+][0-9]{1,3}\s[0-9]{8,11}$" placeholder="+34 123456789">
+Campo de tipo telefono, identificado como ‘telefono’, de nombre ‘telefono’, obligatorio y que debe ajustarse al patrón ‘^^[\+][0-9]{1,3}\s[0-9]{8,11}$’ que obliga a empezar por ‘+’ seguido de entre 1 y 3 números (para permitir códigos de países extranjeros), un espacio ‘ ‘ y entre 8 y 11 números. Mientras no esté relleno por el usuario, mostrará la ayuda visual ‘+34 123456789’
+<textarea id="motivos" name="motivos" rows="4" cols="50" required minlength="5" placeholder="Me gustaría inscribirme porque..." ></textarea>
+Campo de tipo área de texto, identificado como ‘motivos’, de nombre ‘motivos’, de 4 filas de alto por 50 columnas de ancho, obligatorio y de longitud mínima 5. Mientras no esté relleno por el usuario, mostrará la ayuda visual ‘Me gustaría inscribirme porque...’.
+<select id="profesion" name="profesion" required></select>
+Campo de tipo lista desplegable de selección, identificado como ‘profesion’, de nombre ‘profesion’ y obligatorio. Permitirá elegir una y sólo una de las opciones contenidas entre sus etiquetas de apertura y cierre.
+<option value="" disabled selected>- Selecciona una profesión -</option>
+Opción de la lista desplegable de selección. Si es la seleccionada devolverá el valor vacío ‘’, no permitirá ser elegida e inicialmente será la seleccionada. Es utilizada como placeholder para que en la lista desplegable aparezca como opción inicial (selected) pero en gris (disabled) el texto de ayuda ‘- Selecciona una profesión -’
+<option value="bachillerato">Estudiante de Bachillerato</option>
+Opción de la lista desplegable de selección. Si es la seleccionada devolverá el valor ‘bachillerato’. 
+<input type="checkbox" name="taller" id="conferencia" value="conferencia">
+Campo de tipo caja de selección, de nombre ‘taller’, identificado como ‘conferencia’ y que de ser seleccionada devolverá el valor ‘conferencia’. Con el mismo nombre pero con distinta identificación y valor se añaden las demás opciones seleccionables. Este tipo de campo permite la elección de un número cualquiera de valores.
+<input type="radio" name="fechas" id="tresdias" value="tresdias" required>
+Campo de tipo radiobutton, de nombre ‘fechas’, identificado como ‘tresdias’ y que de ser seleccionada devolverá el valor ‘tresdias’. Con el mismo nombre pero con distinta identificación y valor se añaden las demás opciones. Este tipo de campo sólo permite la elección de uno de los valores.
+<input type="checkbox" id="acepto" name="acepto" required>
+Campo de tipo caja de selección, de nombre ‘acepto’, identificado como ‘acepto’ y que de ser seleccionada devolverá el valor ‘acepto’. Obligatorio.
 
-    <nav>
-        <ul>
-            <li><a href="./index.html">Inicio</a></li>
-            <li><a href="./programacion.html">Programación</a></a></li>
-            <li><a href="./inscripcion.html">Registro a las Jornadas</a></a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <h2 class="italic">XXI Jornadas de Periodismo</h2>
-
-        <section id="uno">
-            <video src="./media/video_jornadas.mp4" width="300px" controls>Video</video>
-            Con el reto de llevar el periodismo europeo más allá de la actividad
-            institucional, las jornadas parten del interés común de explorar
-            nuevas vías de colaboración como la desarrollada por el CEEDCV y The
-            Guardian, que desde 2019 comparten tanto contenidos, reportajes y
-            noticias diarias, como aprendizajes sobre el modelo de financiación
-            por socios que tienen en común.
-        </section>
-
-        <section id="dos">
-            <article id="donde">
-                <h2 class="subrayado">¿Dónde se realiza?</h2>
-                Salón de actos del complejo Misericórdia <br>
-                Plaza de la Misericórdia, Valencia, 46115 Tel. 96 351 25 22 <br>
-                <a href="mailto:info@congresoceed.com" title="Dirección de email para solicitar más información"
-                    class="subrayado_fino">info@congresoceed.com</a><br>
-                <a href=""><i class="fa-brands fa-twitter"></i></a><a href=""><i
-                        class="fa-brands fa-facebook-f"></i></a>
 
 
-            </article>
-            <article id="cuando">
-                <h2 class="subrayado">¿Cuándo se realiza?</h2>
-                Sábado,11 de marzo, de 9:00 h a 20:00 h <br>
-                Domingo, 12 de marzo, de 9:00 h a 14:00 h <br>
-                Lunes, 13 de marzo, de 9:00 h a 20:00 h <br>
-                Martes, 14 de marzo, de 9:00 h a 14:00 h <br>
-                <h3>Entrada libre con <a href="./inscripcion.html" class="subrayado_fino">inscripción</a> previa</h3>
-            </article>
-        </section>
+Entidades CSS utilizadas en el proyecto.
+(Por orden de aparición). 
+Entidad
+Significado / Uso
+Import
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lato:ital,wght@1,700&family=Libre+Baskerville:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap')
+Se cargan las fuentes Fjalla One, Lato, Libre Baskerville y Open Sans desde Google Fonts para poder ser utilizadas en este proyecto.
+Selectores
+body
+Estilo aplicable a todo el cuerpo de la página.
+h1
+Estilo aplicable a los títulos de primer nivel.
+h2
+Estilo aplicable a los títulos de segundo nivel.
+header
+Estilo aplicable al encabezado.
+header img
+Estilo aplicable a las imágenes del encabezado.
+header h1
+Estilo aplicable a los títulos de primer nivel del encabezado.
+header p
+Estilo aplicable a los párrafos del encabezado.
+nav
+Estilo aplicable al menú de navegación.
+nav ul
+Estilo aplicable a las listas no ordenadas del menú de navegación.
+nav li
+Estilo aplicable a los elementos de lista del menú de navegación.
+nav li a 
+Estilo aplicable a los enlaces de los elementos de lista del menú de navegación.
+nav li a:hover
+Estilo aplicable a los enlaces de los elementos de lista del menú de navegación cuando el puntero (el ratón) pasa por encima.
+main h2
+Estilo aplicable a los títulos de segundo nivel del principal.
+.italic
+Estilo aplicable a los elementos marcados con ‘class="italic"’. Puede haber varios elementos así marcados.
+section
+Estilo aplicable a las subsecciones.
+#uno
+Estilo aplicable al elemento marcado con ‘id="uno"’. Sólo puede haber uno de estos elementos.
+#uno video 
+Estilo aplicable a los videos del elemento marcado con ‘id="uno"’.
+#dos h2
+Estilo aplicable a los títulos de segundo nivel del elemento marcado con ‘id="dos"’.
+#dos article
+Estilo aplicable a los artículos del elemento marcado con ‘id="dos"’.
+.subrayado
+Estilo aplicable a los elementos marcados con ‘class="subrayado"’. Puede haber varios elementos así marcados.
+.subrayado_fino
+Estilo aplicable a los elementos marcados con ‘class="subrayado_fino"’. Puede haber varios elementos así marcados.
+#tres div
+Estilo aplicable a los contenedores tipo <div> del elemento marcado con ‘id="tres"’.
+footer
+Estilo aplicable al pie de página.
+table
+Estilo aplicable a la tabla.
+caption
+Estilo aplicable al subtítulo de la tabla.
+thead
+Estilo aplicable al encabezado de la tabla.
+tfoot
+Estilo aplicable al pie de la tabla.
+tr:nth-child(even) 
+Estilo aplicable a las filas (‘th’) pares (‘even’).
+td
+Estilo aplicable a los datos de la tabla.
+td:last-child
+Estilo aplicable al último dato de cada fila de la tabla.
+ol
+Estilo aplicable a las listas ordenadas.
+ul
+Estilo aplicable a las listas desordenadas.
+ol>li 
+Estilo aplicable a los elementos de lista descendientes directos de una lista ordenada.
+li
+Estilo aplicable a elemento de lista genérico.
+form
+Estilo aplicable a los formularios.
+fieldset,
+input,
+textarea,
+select
+Estilo aplicable a las áreas de campos, a los campos entrada, a las áreas de texto y a las listas de selección.
+label
+Estilo aplicable a las etiquetas de formularios.
+input:required:valid,
+textarea:required:valid,
+select:required:valid 
+Estilo aplicable a los campos entrada, a las áreas de texto y a las listas de selección que tengan un valor válido.
+input:required:invalid,
+textarea:required:invalid,
+select:required:invalid
+Estilo aplicable a los campos entrada, a las áreas de texto y a las listas de selección que tengan un valor no válido.
+#enviar 
+Estilo aplicable al elemento marcado con ‘id="enviar"’. Sólo puede haber uno de estos elementos.
+Declaraciones
+margin: 0px;
+Márgenes (espaciado exterior) de la caja de 0 píxeles de ancho por los 4 lados.
+padding: 0px;
+Acolchado (espaciado interior) de la caja de 0 píxeles de ancho por los 4 lados.
+font-family: 'Open Sans', sans-serif;
+Tipo de fuente utilizada 'Open Sans', o, si no está disponible, sans-serif;
+font-size: 16px;
+Tamaño de fuente 16 píxeles.
+font-weight: 400;
+Peso de la fuente 400. De una escala de 100, muy ligera, a 900, muy negrita.
+color: #A9A9A9;
+Color de texto.
+background-color: #CCEAF4;
+Color de fondo.
+overflow: hidden;
+Amplía los límites de este contenedor para evitar que los elementos flotados se “salgan” de sus límites.
+padding: 20px 15%;
+Acolchado (espaciado interior) de la caja de 20 píxeles por arriba y por abajo y del 15% del ancho del contenedor padre por la derecha e izquierda.
+float: left;
+Marcar el elemento como “flotando” a la izquierda. El elemento se saca del flujo normal y se sitúa a la izquierda de los elementos del mismo contenedor padre.
+rotate: -15deg;
+El elemento se rota 15 grados en sentido contrario a las agujas del reloj.
+text-align: right;
+Alineamiento del texto a la derecha.
+text-transform: uppercase;
+Transforma el texto y lo pone todo en mayúsculas.
+font-size: 2rem;
+Tamaño de fuente 2 veces la utilizada en el documento, la definida para el cuerpo del documento <body>.
+text-align: center;
+Alineamiento del texto al centro.
+font-weight: bold;
+Peso de la fuente: negrita.
+display: inline-block
+Convierte un elemento de bloque (en este caso los <li>) en elemento de línea.
+text-decoration-line: none;
+Fija el elemento como no subrayado.
+text-decoration-line: underline;
+Fija el elemento como subrayado.
+font-style: italic;
+Estilo de fuente: itálica.
+text-align: justify;
+Alineamiento del texto justificado.
+text-justify: inter-word;
+Método de justificado de texto: espaciado entre palabras.
+width: 49%;
+Ancho del elemento: 49% del ancho del contenedor padre.
+vertical-align: top;
+Alineamiento vertical: arriba.
+line-height: 1.5rem;
+Altura de línea 1.5 veces el tamaño de texto del <body>.
+font-style: normal;
+Estilo de fuente: normal. (No itálica).
+border-bottom: 0.2rem dotted #b9d231;
+Borde inferior de 0.2 veces el tamaño de la fuente del <body>, de puntos (no línea contínua ni discontínua) y de color #b9d231. 
+padding: 0px 30px 0px 0px;
+Acolchado (espaciado interior) de la caja de 0 píxeles por arriba, 30 píxeles por la derecha, 0 píxeles por abajo y 0 píxeles por la izquierda.
+list-style: none;
+Estilo de lista: ninguno.
+border-radius: 10px;
+Radio del borde de 10 píxeles para las cuatro esquinas.
+margin-bottom: 20px;
+Márgen inferior de 20 píxeles.
+min-width: 20%;
+Ancho mínimo del elemento: 20% del ancho del contenedor padre.
+outline: 2px solid rgba(60, 255, 0, 0.5);
+Borde interior (no aumenta el tamaño exterior de la caja que contiene el elemento) de 2 píxeles de ancho, línea contínua, de color rgba(60, 255, 0, 0.5).
 
-        <section id="tres">
-            <h2>Eventos interesantes</h2>
-            <div> 
-                <img src="./img/evento1.png" alt="Evento 1" width="90%" height="100px">
-                <br> Formación integral para el periodista de Televisión - Noviembre 2023
-            </div>
-            <div> 
-                <img src="./img/evento2.png" alt="Evento 2" width="90%" height="100px">
-                <br> JICUP Periodismo a distancia
-            </div>
-            <div> 
-                <img src="./img/evento3.png" alt="Evento 3" width="90%" height="100px">
-                <br> Sexta Jornada de Seguridad de la Información
-            </div>
-            <div>
-                <img src="./img/evento4.png" alt="Evento 4" width="90%" height="100px">
-                <br> Jornada Internacional
-            </div>
-            <div> 
-                <img src="./img/evento5.png" alt="Evento 5" width="90%" height="100px">
-                <br> I Jornadas de Periodismo Europeo.
-            </div>
-            <div> 
-                <img src="./img/evento6.png" alt="Evento 6" width="90%" height="100px">
-                <br> XIX Jornada Nacional de Periodismo
-            </div>
-
-        </section>
-    </main>
-
-    <footer>
-        Actividad realizada por Pablo Gimeno Ramallo, para la actividad de Lenguajes de marcas <br>
-        Primer trimestre 2022/23
-    </footer>
-
-
-
-</body>
-
-</html>
